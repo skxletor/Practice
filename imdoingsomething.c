@@ -1,17 +1,12 @@
 #include <stdio.h>
 
 int main() {
+    double number;
     
+    printf("go retard: \n");
+    scanf("%d", &number);
 
-    int age = 67;
-    int age2 = 6677;
-
-
-    printf("i am %d and vro is %d\n", age2, age);
-
-    age2 = age;
-
-    printf("ur fucvking stupid im %d", age2);
+    printf("%d * 3 = %d3", number, number);
 
     return 0;
 }
