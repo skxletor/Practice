@@ -7,13 +7,13 @@ int main(){
     double retardNumber;
     char retardChar;
 
-    printf("gimme a retearded number\n ");
-    scanf("%lf", &retardNumber);
+    printf("gimme a retearded number ");
+    scanf("\n%lf", &retardNumber);
 
     printf("gimme a retarded character ");
-    scanf("%c", &retardChar);
+    scanf("\n%c", &retardChar);
 
 
-    printf("retard = %c + %lf",retardChar, retardNumber);
+    printf("retard = %.0lf%c",retardNumber, retardChar);
     return 0;
 }
