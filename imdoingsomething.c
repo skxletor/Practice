@@ -13,6 +13,5 @@ int main() {
 
     printf("ur fucvking stupid im %d", age2);
 
-
     return 0;
 }
