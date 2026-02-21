@@ -4,9 +4,13 @@
 int main(){
 
 
-    double x = 6;
-
-    printf("%lf", ++x);
+    double x = 6.7;
+    int y = 7;
+    
+    double result = (int)x++ + y; 
+    
+    
+    printf("%lf %lf", result,x);
 
 
     return 0;
