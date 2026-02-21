@@ -3,15 +3,19 @@
 
 int main(){
 
-    bool value1 = (12>6.7);
+    int a = 221;
+    int b = 22;
 
-    int a= printf("%d", value1);
+    bool value = (a>b);
 
-    if (a != 1)
+    int c = (value);
+
+    if (c != 0)
     {
-        printf("\nwow");
+        printf("wow");
     }
-    
+   
+
 
 
 
