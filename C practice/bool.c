@@ -3,16 +3,20 @@
 
 int main(){
 
-    int a = 221;
-    int b = 22;
+    int a = 21;
+    int b = 222;
 
-    bool value = (a>b);
+    bool value = !(a>b);
 
     int c = (value);
 
-    if (c != 0)
+    if (c == 0)
     {
-        printf("wow");
+        printf("fake");
+    }
+    else if (c == 1)
+    {
+        printf("wow true");
     }
    
 
