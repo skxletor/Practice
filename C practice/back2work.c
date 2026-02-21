@@ -3,15 +3,10 @@
 
 int main(){
 
+    int a = 1;
 
-    double x = 6.7;
-    int y = 7;
-    
-    double result = (int)x++ + y; 
-    
-    
-    printf("%lf %lf", result,x);
-
-
+    int b =2;
+    double result = (double)a/b;
+    printf("%lf", result);
     return 0;
 }
