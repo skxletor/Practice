@@ -7,11 +7,12 @@ int main(){
     printf("age pls tard \n");
     scanf("%d",&age);
 
-    if (age == 67){
+    if (age == (67||76)){
         printf("fuck you retard");
     }
     
 
 
     return 0;
+
 }
