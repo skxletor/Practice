@@ -9,7 +9,15 @@ int main(){
 
     
     if (age == 67||age == 69||age == 76){
-        printf("fuck you retard\n");
+
+        if (age == 67)
+        {
+            printf("So youi really tarded huhb");
+        }
+        else{
+            printf("fuck you retard\n");
+        }
+        
     }
     else if (age <= 9 && age > 0){
         printf("i know ur fuckin lying stfu bitch\n");
