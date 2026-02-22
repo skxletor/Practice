@@ -4,15 +4,15 @@
 int main(){
 
     int age;
-    printf("age pls tard \n");
+    printf("age pls tard \n\n");
     scanf("%d",&age);
 
     
     if (age == 67||age == 69||age == 76){
-        printf("fuck you retard");
+        printf("\nfuck you retard\n\n");
     }
     else{
-        printf("your age is not retgadred");
+        printf("\nyour age is not retgadred\n\n");
 
     }
     
