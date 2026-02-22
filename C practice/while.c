@@ -5,6 +5,8 @@ int main(){
 
     int count =10;
 // this shit lowkey a waste of my time get to the good stuff twin
+    
+
     // while(count<5){
     //     count = ++count;
     //     printf("%i\n",count);
