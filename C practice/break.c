@@ -1,14 +1,17 @@
 #include <stdio.h>
 
 
-void greetingsTwin(){
+void greetingsTwin(char test[]){
 
-    printf("goodmoring twin");
+    printf("thank you %s\n", test);
 }
 
 int main(){
 
-greetingsTwin();
+    char name[]= "vro";
+    greetingsTwin(name);
+    greetingsTwin(name);
+
 
 
     return 0;
