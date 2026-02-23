@@ -2,10 +2,10 @@
 
 int main(){
 
-    int factorial;
-    int j=1;
+    double factorial;
+    double j=1;
     printf("what num do u wanna factorialize \n");
-    scanf("%d",&factorial);
+    scanf("%lf",&factorial);
 
     if (factorial < 0)
     {
@@ -19,7 +19,7 @@ int main(){
             j=j*i;
 
         }
-        printf("%d",j);
+        printf("%.0lf!=%.0lf",factorial,j);
     }
 
 
