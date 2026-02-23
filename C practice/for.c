@@ -3,29 +3,23 @@
 int main(){
 
     int factorial;
-
+    int j=1;
     printf("what num do u wanna factorialize \n");
     scanf("%d",&factorial);
 
-    if (factorial == 0)
+    if (factorial < 0)
     {
-        printf("1");
+        printf("no");
     }
     else{
 
-        for (size_t i = (factorial-1); i > 0; i--)
+        for (size_t i = 1; i <= factorial; i++)
         {
-            factorial=factorial*i;
 
-            printf("%d ",i);
-            if (i=1)
-            {
-              printf("%d",factorial);
-            }
-            else
-            continue;
-            
+            j=j*i;
+
         }
+        printf("%d",j);
     }
 
 
