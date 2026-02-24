@@ -19,7 +19,10 @@ int main(){
 
     printf("%d",sum);
 
-
+    //or you could do
+    //int* result = sumF(-----)
+    //print(result)
+ 
 
 
     return 0;
