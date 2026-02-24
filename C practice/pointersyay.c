@@ -5,5 +5,8 @@
 int main(){
 
 
+    int age = 25;
+
+
     return 0;
 }
