@@ -5,7 +5,20 @@
 int main(){
 
 
-    int age = 25;
+    int num = 25;
+
+    int *ptr = &num;
+
+    // printf("%p",ptr);
+
+    // printf("\n%d",*ptr);
+
+    *ptr = 2121;
+
+    printf("%d",num);
+
+
+
 
 
     return 0;
