@@ -2,11 +2,24 @@
 
 int main(){
 
-    int sick[]= {1, 2, 3, 4, 5} ;
+    int grades[5];
+    int gradeTot;
+    printf("input grades tard: ");
 
-    sick[0]=67;
+    for (size_t i = 0; i < 5; i++)
+    {
+        scanf("%d",&grades[i]);
+    }
+    for (size_t i = 0; i < 5; i++)
+    {
 
-    printf("%d",sick[0]);
+        gradeTot = gradeTot + grades[i];
+        printf("%d \n", gradeTot);
+    }  
+
+    int avg = gradeTot/5;
+    printf("%d", avg);
+
 
     return 0;
 }
