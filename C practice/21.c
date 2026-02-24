@@ -1,16 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
 
-    char wrld[]= "fuck progtramiz";
+    char wrld[]= "fuck programiz";
+    char wwow[]= " ikr";
 
     // fgets(wrld, sizeof(wrld),stdin);
 
 
-    for (size_t i = 0; i < sizeof(wrld); i++)
-    {
-        printf("%c\n",wrld[i]);
-    }
+    // printf("%zu ",strlen(wrld));
+    // printf("%zu",sizeof(wrld));
+
+    // for (size_t i = 0; i < strlen(wrld); i++)
+    // {
+    //     printf("%c\n",wrld[i]);
+    // }
+
+
+    strcat(wrld,wwow);
+    printf("%s",wrld);
     
 
 
