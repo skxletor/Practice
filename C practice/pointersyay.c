@@ -7,7 +7,7 @@ int main(){
 
     int num = 25;
 
-    int *ptr = &num;
+    int* ptr = &num;
 
     // printf("%p",ptr);
 
