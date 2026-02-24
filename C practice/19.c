@@ -3,7 +3,7 @@
 int main(){
 
     int grades[5];
-    int gradeTot;
+    int gradeTot = 0;
     printf("input grades tard: ");
 
     for (size_t i = 0; i < 5; i++)
@@ -14,7 +14,6 @@ int main(){
     {
 
         gradeTot = gradeTot + grades[i];
-        printf("%d \n", gradeTot);
     }  
 
     int avg = gradeTot/5;
