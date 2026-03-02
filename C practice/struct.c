@@ -1,26 +1,29 @@
 #include <stdio.h>
 
-struct person
+typedef struct asdfasdf
 {
-    double gpa;
-    int age;
-};
+    int real;
+    int imag;
+}comp;
 
 
 int main(){
 
-    struct person person1;
-    struct person person2;
-    person1.gpa = 1;
-    person1.age=4;
 
-    person2.gpa = 4;
-    person2.age=400;
+    int real1v;
+    int imag1v;
+    int real2v;
+    int imag2v;
+
+    scanf("%d",&real1v);
+    scanf("%d",&imag1v);
+    struct asdfasdf num1={real1v,imag1v};
+
+    printf("%d + %di",num1.real,num1.imag);
+    //look in video to figure out why i cant add it
+
 
     
-    printf("dumb %.1lf and unc %d\n", person1.gpa,person1.age);
-    printf("genius %.1lf and wow %d", person2.gpa,person2.age);
-
 
     return 0;
 }
