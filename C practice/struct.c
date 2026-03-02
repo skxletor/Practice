@@ -20,7 +20,6 @@ int main(){
     struct asdfasdf num1={real1v,imag1v};
 
     printf("%d + %di",num1.real,num1.imag);
-    //look in video to figure out why i cant add it
 
 
     
