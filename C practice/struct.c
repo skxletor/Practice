@@ -1,25 +1,19 @@
 #include <stdio.h>
 
-typedef struct asdfasdf
+typedef struct testS
 {
-    int real;
-    int imag;
-}comp;
+    int whaaat;
+    int whaaat2;
+}shitty;
 
 
 int main(){
 
+    shitty number ={21,23};
 
-    int real1v;
-    int imag1v;
-    int real2v;
-    int imag2v;
+    printf("%d then %d",number.whaaat,number.whaaat2);
 
-    scanf("%d",&real1v);
-    scanf("%d",&imag1v);
-    struct asdfasdf num1={real1v,imag1v};
 
-    printf("%d + %di",num1.real,num1.imag);
 
 
     
