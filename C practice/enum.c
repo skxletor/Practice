@@ -1,17 +1,20 @@
 #include<stdio.h>
 
-enum Funny{
-    six=67,
-    seven=76,
-    noWay=666,
-    nine=69 
-
-};
+enum Days{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+}weekend1,weekend2;
 
 int main(){
-    enum Funny WOWWW=six;
-    printf("%d",WOWWW);
 
+    weekend1 = Saturday;
+    weekend2 = Sunday;
 
+    printf("%d %d booo",weekend1, weekend2);
     return 0;
 }
