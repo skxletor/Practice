@@ -4,8 +4,17 @@ int main(){
 
     FILE* fptr;
 
-    fptr = fopen("README.md", "r");
+    fptr = fopen("ILOVEC.txt", "r");
+    if (fptr != NULL)
+    {
+        printf("yay");
 
+    }
+    else{
+
+        printf("boo");
+    }
     
+
     return 0;
 }
