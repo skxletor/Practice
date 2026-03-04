@@ -11,31 +11,45 @@
 int main(){
 
     double bal = 1000;
-    double balAdd;
-    char withdraw[]="withdraw";
-    char deposit[]="deposit";
+    double balDiff;
     char choice[50];
 
     while (1)
     {
-        printf("Your balance is $%.2lf twin.\n Do you wanna deposit or withdraw money? or leave and make me sad :( : ",bal);
+        printf("Your balance is $%.2lf twin.\n",bal);
+        printf("Do you wanna deposit or withdraw money? or stop: ");
         fgets(choice, sizeof(choice),stdin);
-        printf("%d\n",strlen(choice));
-        // if (strlen(choice)==8)
+        // printf("%d\n",strlen(choice));
+        if (strcmp(choice,"deposit\n")==0)
         {
-            printf("How much u wanna deposit\n");
-            scanf("%lf",&balAdd);
-            bal = bal+balAdd;
+            printf("How much u wanna deposit: ");
+            scanf("%lf",&balDiff);
+            int ch;
+
         }
-        if (strlen(choice)==9)
+        else if (strcmp(choice,"withdraw\n")==0)
         {
-            printf("with\n");
-            scanf("%lf",&balAdd);
-            bal = bal-balAdd;
+            printf("how much to withdraw: ");
+            scanf("%lf",&balDiff);
+
+
+
+            if (balDiff>bal)
+            {
+                printf("fuck u greedy \n");
+            }
+            else{
+                bal = bal-balDiff;
+            }
         }
-        else
+        else if (strcmp(choice,"stop\n")==0)
         {
+            printf("bye");
             break;
+        }
+        else{
+            printf("fuck you thats not an answer\n");
+
         }
         
         
