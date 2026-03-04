@@ -1,9 +1,16 @@
 //test
 #include <iostream>
 
+void Log(const char* message){
+
+    std::cout << message << std::endl;
+
+
+}
+
 int main(){
 
-    std ::cout << "hello vro"<< std::endl;
+    Log("vro what the ufkc");
     std::cin.get();
 
 }
