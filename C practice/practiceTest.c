@@ -14,8 +14,28 @@ int main(){
     char deposit[]="deposit";
     char choice[50];
 
-    printf("Your balance is %lf twin.\n Do you wanna deposit or withdraw money? or leave and make me sad :(",bal);
-    scanf("%s",&choice[50]);
+    while (1)
+    {
+        printf("Your balance is %lf twin.\n Do you wanna deposit or withdraw money? or leave and make me sad :(",bal);
+        scanf("%s",&choice[50]);
+        //these dont work rn
+        if ((char*)choice=="deposit")
+        {
+            printf("depo");
+        }
+        if ((char*)choice=="withdraw")
+        {
+            printf("depo");
+        }
+        else
+        {
+            break;
+        }
+        
+        
+    }
+    
+
 
     return 0;
 }
