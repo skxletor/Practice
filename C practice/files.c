@@ -6,11 +6,17 @@ int main(){
 
     char messageForU[500];
 
-    fptr = fopen("ILOVEC.txt", "r");
+    fptr = fopen("ILOVEC2.txt", "w");
     if (fptr != NULL){
-        fgets(messageForU,500,fptr);
-        printf("%s",messageForU);
-        printf("\n\nyay");
+        // while(fgets(messageForU,500,fptr)){
+        //     printf("%s",messageForU);
+        // }
+        printf("\nyay");
+        for (size_t i = 0; i < 50; i++)
+        {
+            fprintf(fptr,"this is probably line %d\n",i+1);
+        }
+        
 
     }
     else{
@@ -18,6 +24,6 @@ int main(){
         printf("boo");
     }
     
-
+    fclose(fptr);
     return 0;
 }
