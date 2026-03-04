@@ -9,6 +9,13 @@
 
 int main(){
 
+    double bal = 1000;
+    char withdraw[]="withdraw";
+    char deposit[]="deposit";
+    char choice[50];
+
+    printf("Your balance is %lf twin.\n Do you wanna deposit or withdraw money? or leave and make me sad :(",bal);
+    scanf("%s",&choice[50]);
 
     return 0;
 }
