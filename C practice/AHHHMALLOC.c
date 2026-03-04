@@ -5,7 +5,7 @@ int main(){
 
     int n=5;
     int* pn;
-    pn =(int*) malloc(n * sizeof(int));
+    pn =malloc(n * sizeof(int));
 
     if (pn == NULL)
     {
