@@ -1,15 +1,16 @@
 #include <iostream>
 
+void multiply(int a, int b){
+    
+    int result = a * b;
+
+    std::cout << result << std::endl;
+}
+
+
 int main(){
 
-int var = 8;
-
-std::cout << var << std::endl;
-
-var = 88;
-
-std::cout << var << std::endl;
-
+    multiply(6,7);
 
 
     
