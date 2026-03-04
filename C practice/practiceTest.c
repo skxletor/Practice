@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // 1. Start the user with a balance of $1000
 // 2. Show a menu with 3 options: check balance, deposit, and withdraw
@@ -17,15 +18,15 @@ int main(){
     while (1)
     {
         printf("Your balance is %lf twin.\n Do you wanna deposit or withdraw money? or leave and make me sad :(",bal);
-        scanf("%s",&choice[50]);
+        fgets(choice, sizeof(choice),stdin);
         //these dont work rn
-        if ((char*)choice=="deposit")
+        if (strlen(choice)==8)
         {
-            printf("depo");
+            printf("depo\n");
         }
-        if ((char*)choice=="withdraw")
+        if (strlen(choice)==9)
         {
-            printf("depo");
+            printf("with\n");
         }
         else
         {
