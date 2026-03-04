@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
 
     int n=5;
     int* pn;
-    pn =(int*)malloc(n * sizeof(int));
+    pn =(int*) malloc(n * sizeof(int));
 
     if (pn == NULL)
     {
