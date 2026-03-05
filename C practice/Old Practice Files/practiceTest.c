@@ -19,19 +19,21 @@ int main(){
         printf("Your balance is $%.2lf twin.\n",bal);
         printf("Do you wanna deposit or withdraw money? or stop: ");
         fgets(choice, sizeof(choice),stdin);
-        // printf("%d\n",strlen(choice));
+        
         if (strcmp(choice,"deposit\n")==0)
         {
             printf("How much u wanna deposit: ");
             scanf("%lf",&balDiff);
             int ch;
-
+            while ((ch = getchar()) != '\n' && ch != EOF) {}
+            bal = bal+balDiff;
         }
         else if (strcmp(choice,"withdraw\n")==0)
         {
             printf("how much to withdraw: ");
             scanf("%lf",&balDiff);
-
+            int ch;
+            while ((ch = getchar()) != '\n' && ch != EOF) {}
 
 
             if (balDiff>bal)
