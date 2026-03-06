@@ -5,9 +5,8 @@
 int main(){
 
     int var =8;
-    int* ptr = &var;
-
-    LOG(*ptr);
+    int& ref = var;
+    LOG(ref);
 
     std::cin.get();
 
