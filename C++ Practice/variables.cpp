@@ -5,10 +5,10 @@
 int main(){
 
     int var =8;
-    void* ptr = &var;
+    int* ptr = &var;
 
-    LOG(ptr);
-    
+    LOG(*ptr);
+
     std::cin.get();
 
     
