@@ -32,8 +32,8 @@ public:
 int main(){
 
     Log log;
-    log.setlevel(0);
-    log.warn("warning twin");
+    log.setlevel(log.loglevelwarn);
+    log.warn("idk wtf going on imma keep it a buck");
 
 
 
