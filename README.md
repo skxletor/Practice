@@ -2,4 +2,4 @@
 
 hi
 
-im practicing C and C++ imn so cool
+im practicing C and C++ im so cool and original right
