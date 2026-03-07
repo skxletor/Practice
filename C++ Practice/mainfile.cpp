@@ -7,7 +7,7 @@ public:
     const int loglevelwarn =1;
     const int logleveltrace =2;
 private:
-    int m_loglevel;
+    int m_loglevel =logleveltrace;
 
 public:
 
