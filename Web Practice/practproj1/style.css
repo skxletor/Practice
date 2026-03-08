@@ -1,0 +1,14 @@
+*{
+
+    outline: 2px solid red;
+}
+
+.title{
+
+    color: aquamarine;
+}
+
+.othertitle{
+
+    font-family:'Courier New', Courier, monospace,bold;
+}
