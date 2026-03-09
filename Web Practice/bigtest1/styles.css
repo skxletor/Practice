@@ -4,87 +4,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border:2px solid red; */
+     /* border:2px solid red;  */
 }
 
 a {
   text-decoration: none;
 }
 
+body {
+    min-height: 100vh;
+    font-family: 'Roboto';
+    font-family: "Roboto","Arial",sans-serif;
+    background-image: url("./imgs/israel.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /*this was set to fixed*/
+    /* color: #F5F5DC; */
+}
 
-.header-container{
-    display:flex;
-    background:#1F2937 ;
-    padding: 10px;
+
+header {
+    position: sticky;
+    background-color: #1f2937;
+    width: 100%;
     align-items: center;
-
+    padding: 16px;
+    display: flex;
 }
 
-.header-title{
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    color:aliceblue;
-    font-weight: 500;
-    margin-left:100px;
-    flex:1;
-
+.logo{
+    font: 24px;
+    font-weight: 400;
+    color: #f9faf8;
 }
 
-.link-container{
-    flex:1;
-    text-align: right;
-    margin-right: 100px;
+.links{
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
 }
 
-.link-one,
-.link-two,
-.link-three{
-
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(144, 153, 162);
-    font-weight: 200;
-    align-items:right;
-    margin-right:10px;
-    
+.link-1,
+.link-2,
+.link-3{
+    font: 18px;
+    color: #bcc1c9;
 }
 
-.body-container{
+.body{
+
     display:flex;
-    flex-direction: row;
-    background:#1F2937 ;
-    padding: 200px;
+    height: 200px;
+    width:100%;
+    background-color: #1f2937;
     justify-content: center;
-
+    gap: 20px;
 }
 
-.body-text-container{
+.tiny-body{
     display:flex;
     flex-direction: column;
-    align-items: center;
-
+    
+    align-items: flex-start;
+    justify-content: center;
 }
-
-.body-bold{
-    font-size: 48px;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(255, 255, 255);
-    font-weight: 900;
-
-}
-.body-small{
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(151, 159, 167);
-    font-weight: 200;
-
+.tiny-body h1{
+    font:48px;
+    color: #f9faf8;
+    weight:900;
 
 
 }
+.tiny-body p{
 
-.body-img{
+    font: 18px;
+    color: #e5e7eb;
 
-    flex:2;
-    height:auto;
-    width:250px;
+
 }
