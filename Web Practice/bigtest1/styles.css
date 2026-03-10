@@ -4,11 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     /* border:2px solid red;  */
+    /* border:2px solid red;   */
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -19,13 +20,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /*this was set to fixed*/
+    background-attachment: fixed; /*this was set to scroll*/
     /* color: #F5F5DC; */
 }
 
 
 header {
     position: sticky;
+    top: 0;
     background-color: #1f2937;
     width: 100%;
     align-items: center;
@@ -34,7 +36,7 @@ header {
 }
 
 .logo{
-    font: 24px;
+    font-size: 24px;
     font-weight: 400;
     color: #f9faf8;
 }
@@ -48,14 +50,17 @@ header {
 .link-1,
 .link-2,
 .link-3{
-    font: 18px;
+    font-size: 18px;
     color: #bcc1c9;
 }
 
 .body{
 
     display:flex;
-    height: 200px;
+    padding-top:100px;
+    padding-left:100px;
+    padding-right:100px;
+    padding-bottom:150px;
     width:100%;
     background-color: #1f2937;
     justify-content: center;
@@ -68,9 +73,11 @@ header {
     
     align-items: flex-start;
     justify-content: center;
+    flex:1;
 }
+
 .tiny-body h1{
-    font:48px;
+    font-size:144px;
     color: #f9faf8;
     weight:900;
 
@@ -78,8 +85,78 @@ header {
 }
 .tiny-body p{
 
-    font: 18px;
-    color: #e5e7eb;
+    font-size: 18px;
+    color: #7d8aa2;
 
+
+}
+
+.img{
+    height:500px;
+    width: 600px; /*THIS WAS SET TO AUTO WHEN I HAD THE FLAG*/
+}
+
+
+.body2{
+    display:flex;
+
+    padding:50px;
+    width:100%;
+    background-color:transparent;
+    justify-content: center;
+
+}
+
+.body2header{
+    color: #1f2937;
+
+}
+.blocks{
+    display:flex;
+    padding:50px;
+    width:100%;
+    margin-bottom:400px;
+    background-color:transparent;
+    justify-content: space-evenly;
+}
+
+.block{
+    height: 300px;
+    display:flex;
+    width: 300px;
+    background-color: #1f2937;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button{
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px;
+    color:#1f2937;
+    background-color:rgb(104, 104, 184);
+    border-radius: 6px;
+    border-color: rgb(44, 61, 221);
+    border-width: 3px;
+    white-space: nowrap;
 
 }
