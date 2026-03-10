@@ -130,6 +130,14 @@ header {
     align-items: center;
 }
 
+footer {
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    padding:20px;
+    background-color: #1f2937; 
+    color:#f9faf8;
+}
 
 
 
