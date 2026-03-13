@@ -47,25 +47,42 @@ function playRound(hChoice, cChoice) {
     else if(hChoice.length===4 && cChoice.length===5){
         console.log("comp win");
     }
-    else if(hChoice.length===8 && cChoice.length===5){
-        console.log("human win");
-    }
-    else if(hChoice.length===5 && cChoice.length===4){
+    else if(hChoice.length===4 && cChoice.length===8){
         console.log("human win");
     }
     else if(hChoice.length===8 && cChoice.length===4){
         console.log("computer win");
+    }
+    else if(hChoice.length===8 && cChoice.length===5){
+        console.log("human win");
+    }
+    else if(hChoice.length===5 && cChoice.length===8){
+        console.log("computer win");
+    }
+    else if(hChoice.length===5 && cChoice.length===4){
+        console.log("human win");
     }
     else{
         console.log("error");
     }
 }
 
-let finalCC = getComputerChoice();
 
-let choiceH = prompt("what?")
+for (let index = 0; index < 5; index++) {
+    
+    let finalCC = getComputerChoice();
 
+    let choiceH = prompt("what?")
 
-let finalCH=getHumanChoice(choiceH)
+    let finalCH=getHumanChoice(choiceH)
 
-playRound(finalCH,finalCC);
+    playRound(finalCH,finalCC);
+    
+}
+// let finalCC = getComputerChoice();
+
+// let choiceH = prompt("what?")
+
+// let finalCH=getHumanChoice(choiceH)
+
+// playRound(finalCH,finalCC);
