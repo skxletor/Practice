@@ -39,10 +39,26 @@ function getHumanChoice(choiceH){
     }
 
 }
-function playRound(humanChoice, computerChoice) {
+function playRound(hChoice, cChoice) {
 
-
-
+    if(hChoice === cChoice){
+        console.log("tie");
+    }
+    else if(hChoice.length===4 && cChoice.length===5){
+        console.log("comp win");
+    }
+    else if(hChoice.length===8 && cChoice.length===5){
+        console.log("human win");
+    }
+    else if(hChoice.length===5 && cChoice.length===4){
+        console.log("human win");
+    }
+    else if(hChoice.length===8 && cChoice.length===4){
+        console.log("computer win");
+    }
+    else{
+        console.log("error");
+    }
 }
 
 let finalCC = getComputerChoice();
@@ -52,4 +68,4 @@ let choiceH = prompt("what?")
 
 let finalCH=getHumanChoice(choiceH)
 
-playRound(finalCC,finalCH);
+playRound(finalCH,finalCC);
