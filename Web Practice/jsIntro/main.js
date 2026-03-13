@@ -23,20 +23,21 @@ function getComputerChoice(){
 
 function getHumanChoice(choiceH){
     let ChoiceH = choiceH.toLowerCase()
-    
-    switch(ChoiceH){
-        case "rock":
-            //console.log("die");
-            return "rock";
-        case "paper":
-            //console.log("die");
-            return "paper";
-        case "scissors":
-            //console.log("die");
-            return "scissors";
-        default:
-            console.log("error");
-    }
+    return ChoiceH;
+    // switch(ChoiceH){
+    //     case "rock":
+    //         //console.log("die");
+    //         return "rock";
+    //     case "paper":
+    //         //console.log("die");
+    //         return "paper";
+    //     case "scissors":
+    //         //console.log("die");
+    //         return "scissors";
+    //     default:
+    //         console.log("error");
+    //         break;
+    // }
 
 }
 function playRound(hChoice, cChoice, humanScore, compScore) {
