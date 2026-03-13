@@ -39,28 +39,42 @@ function getHumanChoice(choiceH){
     }
 
 }
-function playRound(hChoice, cChoice) {
+function playRound(hChoice, cChoice, humanScore, compScore) {
+
+    
 
     if(hChoice === cChoice){
         console.log("tie");
     }
     else if(hChoice.length===4 && cChoice.length===5){
-        console.log("comp win");
+        // console.log("comp win");
+        compScore = 2;
+        return compScore;
     }
     else if(hChoice.length===4 && cChoice.length===8){
-        console.log("human win");
+        // console.log("human win");
+        humanScore = 1;
+        return humanScore;
     }
     else if(hChoice.length===8 && cChoice.length===4){
-        console.log("computer win");
+        // console.log("computer win");
+        compScore = 2;
+        return compScore;
     }
     else if(hChoice.length===8 && cChoice.length===5){
-        console.log("human win");
+        // console.log("human win");
+        humanScore = 1;
+        return humanScore;
     }
     else if(hChoice.length===5 && cChoice.length===8){
-        console.log("computer win");
+        // console.log("computer win");
+        compScore = 2;
+        return compScore;
     }
     else if(hChoice.length===5 && cChoice.length===4){
-        console.log("human win");
+        // console.log("human win");
+        humanScore = 1;
+        return humanScore;
     }
     else{
         console.log("error");
@@ -70,13 +84,35 @@ function playRound(hChoice, cChoice) {
 
 for (let index = 0; index < 5; index++) {
     
+    let magicNumber=0;
     let finalCC = getComputerChoice();
 
     let choiceH = prompt("what?")
 
     let finalCH=getHumanChoice(choiceH)
 
-    playRound(finalCH,finalCC);
+    magicNumber= playRound(finalCH,finalCC,humanScore,compScore);
+
+    if(magicNumber===1){
+        humanScore += 1;
+        console.log("Human Score: " + humanScore);
+        console.log("Computer Score: " + compScore);
+    }
+    else if(magicNumber ===2){
+        compScore += 1;
+        console.log("Human Score: " + humanScore);
+        console.log("Computer Score: " + compScore);
+    }
+    if(index===4){
+        if(humanScore>compScore){
+            console.log("you win twin");
+        }
+        else if(humanScore>compScore){
+            console.log("you lose retard LMFAOOO");
+        }
+
+    }
+    
     
 }
 // let finalCC = getComputerChoice();
