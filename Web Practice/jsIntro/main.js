@@ -1,12 +1,55 @@
-console.log("hello vro");
+// node "Web Practice/jsIntro/main.js"
 
-// function add(text){
+let humanScore = 0;
+let compScore = 0;
+
+function getComputerChoice(){
+    let choiceC=Math.random();
+    if(choiceC<=0.3334){
+        console.log("paper");
+        return "paper";
+    }
+    else if(choiceC<=0.6667 && choiceC>0.3334 ){
+        console.log("rock");
+        return "rock";
+    }
+    else{
+        console.log("scissors");
+        return "scissors";
+    }
+
+}
+
+
+function getHumanChoice(choiceH){
+    let ChoiceH = choiceH.toLowerCase()
     
-//     let newStringU=text[0].toUpperCase()
-//     let newStringL=text.slice(1).toLowerCase()
-//     let newString=newStringU+newStringL
-//     return newString;
-// }
+    switch(ChoiceH){
+        case "rock":
+            //console.log("die");
+            return "rock";
+        case "paper":
+            //console.log("die");
+            return "paper";
+        case "scissors":
+            //console.log("die");
+            return "scissors";
+        default:
+            console.log("error");
+    }
 
-// console.log(add("abcDJAHFhalfhkjHL"));
+}
+function playRound(humanChoice, computerChoice) {
 
+
+
+}
+
+let finalCC = getComputerChoice();
+
+let choiceH = prompt("what?")
+
+
+let finalCH=getHumanChoice(choiceH)
+
+playRound(finalCC,finalCH);
