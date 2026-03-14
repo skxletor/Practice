@@ -1,0 +1,15 @@
+body{
+
+    display:flex;
+}
+
+.scoreboard{
+
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}

@@ -83,16 +83,15 @@ function playRound(hChoice, cChoice, humanScore, compScore) {
 }
 
 
-for (let index = 0; index < 5; index++) {
-    
+
+let roundIndex = 0;
+
+function gameGo(choiceH){
     let magicNumber=0;
     let finalCC = getComputerChoice();
+    let finalCH = getHumanChoice(choiceH);
 
-    let choiceH = prompt("what?")
-
-    let finalCH=getHumanChoice(choiceH)
-
-    magicNumber= playRound(finalCH,finalCC,humanScore,compScore);
+    magicNumber = playRound(finalCH, finalCC, humanScore, compScore);
 
     if(magicNumber===1){
         humanScore += 1;
@@ -104,22 +103,34 @@ for (let index = 0; index < 5; index++) {
         console.log("Human Score: " + humanScore);
         console.log("Computer Score: " + compScore);
     }
-    if(index===4){
+
+    roundIndex++;
+    if(roundIndex===5){
         if(humanScore>compScore){
             console.log("you win twin");
         }
-        else if(humanScore>compScore){
+        else if(compScore>humanScore){
             console.log("you lose retard LMFAOOO");
         }
-
     }
-    
-    
 }
-// let finalCC = getComputerChoice();
 
-// let choiceH = prompt("what?")
+const playRoundid = document.querySelector("#playRoundid");
 
-// let finalCH=getHumanChoice(choiceH)
+const buttonP = document.createElement("button");
+buttonP.classList.add("buttonS");
+buttonP.textContent = "Play Rock Paper Scissors";
 
-// playRound(finalCH,finalCC);
+playRoundid.appendChild(buttonP);
+
+buttonP.addEventListener("click", () => {
+    ["rock", "paper", "scissors"].forEach((choice) => {
+        const btn = document.createElement("button");
+        btn.textContent = choice;
+        btn.addEventListener("click", () => {
+            gameGo(choice);
+        });
+        playRoundid.appendChild(btn);
+    });
+    buttonP.remove();
+});
