@@ -90,27 +90,62 @@ function gameGo(choiceH){
     let magicNumber=0;
     let finalCC = getComputerChoice();
     let finalCH = getHumanChoice(choiceH);
+    const humanSS = document.querySelector(".scoreboard");
+    const compSS = document.querySelector(".scoreboard");
+    const status = document.querySelector(".scoreboard");
 
     magicNumber = playRound(finalCH, finalCC, humanScore, compScore);
 
+    // show round result
+    const oldResult = document.querySelector(".roundResult");
+    if(oldResult) oldResult.remove();
+    const result = document.createElement("p");
+    result.classList.add("roundResult");
     if(magicNumber===1){
         humanScore += 1;
-        console.log("Human Score: " + humanScore);
-        console.log("Computer Score: " + compScore);
-    }
-    else if(magicNumber ===2){
+        result.textContent = `Human wins the round! (${finalCH} beats ${finalCC})`;
+    } else if(magicNumber===2){
         compScore += 1;
-        console.log("Human Score: " + humanScore);
-        console.log("Computer Score: " + compScore);
+        result.textContent = `Computer wins the round! (${finalCC} beats ${finalCH})`;
+    } else {
+        result.textContent = `Tie! Both chose ${finalCH}.`;
     }
+    humanSS.appendChild(result);
+
+    // update score displays
+    const oldHuman = document.querySelector(".human");
+    if(oldHuman) oldHuman.remove();
+    const human = document.createElement("p");
+    human.classList.add("human");
+    human.textContent = "Human score: " + humanScore;
+    humanSS.appendChild(human);
+
+    const oldComp = document.querySelector(".comp");
+    if(oldComp) oldComp.remove();
+    const comp = document.createElement("p");
+    comp.classList.add("comp");
+    comp.textContent = "Computer score: " + compScore;
+    compSS.appendChild(comp);
 
     roundIndex++;
     if(roundIndex===5){
         if(humanScore>compScore){
-            console.log("you win twin");
+            const humanWin = document.createElement("p");
+            humanWin.classList.add("humanWin");
+            humanWin.textContent = "You win!";
+            status.appendChild(humanWin);
         }
         else if(compScore>humanScore){
-            console.log("you lose retard LMFAOOO");
+            const compWin = document.createElement("p");
+            compWin.classList.add("compWin");
+            compWin.textContent = "Computer wins!";
+            status.appendChild(compWin);
+        }
+        else {
+            const tieGame = document.createElement("p");
+            tieGame.classList.add("tieGame");
+            tieGame.textContent = "It's a tie game!";
+            status.appendChild(tieGame);
         }
     }
 }
@@ -122,6 +157,17 @@ buttonP.classList.add("buttonS");
 buttonP.textContent = "Play Rock Paper Scissors";
 
 playRoundid.appendChild(buttonP);
+
+// initialize scores at 0
+const scoreboard = document.querySelector(".scoreboard");
+const initHuman = document.createElement("p");
+initHuman.classList.add("human");
+initHuman.textContent = "Human score: 0";
+scoreboard.appendChild(initHuman);
+const initComp = document.createElement("p");
+initComp.classList.add("comp");
+initComp.textContent = "Computer score: 0";
+scoreboard.appendChild(initComp);
 
 buttonP.addEventListener("click", () => {
     ["rock", "paper", "scissors"].forEach((choice) => {
