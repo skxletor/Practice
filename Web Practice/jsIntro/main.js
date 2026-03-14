@@ -147,6 +147,34 @@ function gameGo(choiceH){
             tieGame.textContent = "It's a tie game!";
             status.appendChild(tieGame);
         }
+
+        setTimeout(() => {
+            humanScore = 0;
+            compScore = 0;
+            roundIndex = 0;
+
+            const oldHuman = document.querySelector(".human");
+            if(oldHuman) oldHuman.remove();
+            const newHuman = document.createElement("p");
+            newHuman.classList.add("human");
+            newHuman.textContent = "Human score: 0";
+            status.appendChild(newHuman);
+
+            const oldComp = document.querySelector(".comp");
+            if(oldComp) oldComp.remove();
+            const newComp = document.createElement("p");
+            newComp.classList.add("comp");
+            newComp.textContent = "Computer score: 0";
+            status.appendChild(newComp);
+
+            const oldResult = document.querySelector(".roundResult");
+            if(oldResult) oldResult.remove();
+            const oldEnd = document.querySelector(".humanWin, .compWin, .tieGame");
+            if(oldEnd) oldEnd.remove();
+
+            document.querySelectorAll("#playRoundid button").forEach(b => b.remove());
+            playRoundid.appendChild(buttonP);
+        }, 3000);
     }
 }
 
