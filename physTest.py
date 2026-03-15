@@ -9,15 +9,22 @@ mult2=0
 for j in range(mult2,1403):
     mult1 = 0
     for i in range(mult1,1403):
-        if(abs((mult1*eCharge)+(mult2*pCharge) - finalCharge) < 1e-25):
-            print("electrons: " + str(mult1))
-            break
+        if(abs(round(((i*eCharge)+(j*pCharge)),20) - finalCharge) < 1e-25):
+            print("electrons: " + str(i))
+            
         else:
             mult1 +=1
             # print("first loop "+ str(mult1))
     mult2 +=1
     # print("second loop " + str(mult2))
 
+# GAH = (eCharge*950)+(pCharge*(total-950))
+# GAHr = round(GAH, 20)
+# print(GAH)
+# print(GAHr)
+
+# if(abs(GAH-finalCharge)<1e-25):
+#     print("yay")
 
 
 wait = input("press enter")
