@@ -1,6 +1,7 @@
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
-class Ball{
+class Ball {
 public:
     float posX;
     float posY;
@@ -8,8 +9,8 @@ public:
     float vY;
     float aX;
     float aY;
-    int mass=4;
-    int radius=2;
+    int mass = 4;
+    int radius = 2;
 
     Ball(float x, float y) {
         posX = x;
@@ -20,25 +21,26 @@ public:
         aY = 0;
     }
 
-    void update(float t){
+    void update(float t) {
         posX = posX + (vX * t);
         posY = posY + (vY * t);
-
-        vX = vX + (aX*t);
-        vY = vY + (aY*t);
-
+        vX = vX + (aX * t);
+        vY = vY + (aY * t);
     }
 };
 
+int main() {
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Billiards");
+    Ball ball1(400, 300);
+    sf::CircleShape shape(ball1.radius);
+    shape.setFillColor(sf::Color::White);
 
+    while (window.isOpen()) {
+        window.clear();
+        shape.setPosition({ball1.posX, ball1.posY});
+        window.draw(shape);
+        window.display();
+    }
 
-int main(){
-    Ball ball1(1,2);
-
-    std::cout << ball << std::endl;
-    
-
-
-
-
+    return 0;
 }
